@@ -1,0 +1,74 @@
+<!-- Main Menu Development (Ends) -->
+
+<%!
+	int id=0;     
+	String username="",name="",add="",email="",phone="";
+	ResultSet rs = null;
+	HttpSession session = null;
+%>
+
+<%
+    int no=Utility.parse(request.getParameter("no"));
+
+    session = request.getSession();
+
+    if(session != null)
+    {
+    	username = session.getAttribute("username").toString();
+    	
+    }
+	
+    rs = AdminDAO.getProfile(username);
+    
+	while(rs.next())
+	{
+		id=rs.getInt(1);
+		username=rs.getString(4);
+		name=rs.getString(2);
+		add=rs.getString(5);
+		email=rs.getString(7);
+		phone=rs.getString(6);
+	}
+	
+	if(no==1)
+	{
+%>
+			<div class="error" id="message">	
+				<p>Opp's,Seems something went wrong ..!</p>
+			</div>
+<%
+	}
+	if(no==0)
+	{
+%>
+			<br>
+			<div align="right" style="position:absolute;top:240px;left:475px">
+				<a class="gradientbuttons" href="<%=request.getContextPath() %>/EditProfile1?username=<%=username %>&no=1" target="myIframe">Edit Profile</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="gradientbuttons" href="<%=request.getContextPath() %>/ChangePass1?username=<%=username %>&no=1&id=<%=id %>" target="myIframe">Change Password</a>
+			</div>
+			<br></br>
+			<div id="a1" align="right" style="position:absolute;top:275px;left:125px">
+				<p>Your ID No : <%=id %></p>
+				<p>Your Name : <%=name %></p>
+				<p>Your User ID : <%=username %></p>
+				<p>Your Mail ID : <%=email %></p>
+				<p>Your Cell N0 : <%=phone %></p>
+				<p>Your Address : <%=add %></p>
+			</div>
+		<%
+		if(Utility.parse(request.getParameter("no1"))==1)
+		{
+			%>
+				<div class="success" id="message">	
+					<p>Your profile updated successfully ..!</p>
+				</div>
+			<%
+		}
+	}
+%>
+
+
+<!-- Display Contents (Starts) -->
+
+
+src="<%=request.getContextPath()%>/Resources/JSP/Admin/show_profile.jsp"

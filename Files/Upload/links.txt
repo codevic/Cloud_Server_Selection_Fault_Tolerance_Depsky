@@ -1,0 +1,13 @@
+Adding Background Music to Android App:
+http://www.codeproject.com/Articles/258176/Adding-Background-Music-to-Android-App
+
+Downloading the files in segment : File Spliter
+http://www.addictivetips.com/mobile/file-splitter-for-android-split-any-file-into-smaller-sized-segments/
+
+
+imp:
+http://stackoverflow.com/questions/3581243/read-a-segment-of-a-file-in-java-android
+
+
+
+http://stackoverflow.com/questions/234210/can-anyone-explain-servlet-mapping

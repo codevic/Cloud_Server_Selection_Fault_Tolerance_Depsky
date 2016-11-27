@@ -1,0 +1,93 @@
+1.#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main () {
+  ofstream myfile;
+  myfile.open ("example.txt");
+  myfile << "Writing this to a file.\n";
+  myfile.close();
+  return 0;
+}
+
+2.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main () {
+  ofstream myfile ("example.txt");
+  if (myfile.is_open())
+  {
+    myfile << "This is a line.\n";
+    myfile << "This is another line.\n";
+    myfile.close();
+  }
+  else cout << "Unable to open file";
+  return 0;
+}
+3.#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main () {
+  string line;
+  ifstream myfile ("example.txt");
+  if (myfile.is_open())
+  {
+    while ( myfile.good() )
+    {
+      getline (myfile,line);
+      cout << line << endl;
+    }
+    myfile.close();
+  }
+
+  else cout << "Unable to open file"; 
+
+  return 0;
+}
+4.
+#include <iostream>
+using namespace std;
+
+int main () {
+  try
+  {
+    throw 20;
+  }
+  catch (int e)
+  {
+    cout << "An exception occurred. Exception Nr. " << e << endl;
+  }
+  return 0;
+}
+5.
+#include <iostream>
+#include <exception>
+using namespace std;
+
+class myexception: public exception
+{
+  virtual const char* what() const throw()
+  {
+    return "My exception happened";
+  }
+} myex;
+
+int main () {
+  try
+  {
+    throw myex;
+  }
+  catch (exception& e)
+  {
+    cout << e.what() << endl;
+  }
+  return 0;
+}
+
+
+
+

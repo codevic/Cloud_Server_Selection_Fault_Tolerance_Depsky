@@ -1,0 +1,177 @@
+<web-app>
+
+    <display-name>Multi-Cloud Security</display-name>
+
+    <!-- All About Admin -->
+
+	<servlet>
+		<servlet-name>UserLogin</servlet-name>
+		<servlet-class>com.kumar.action.user.UserLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogin</servlet-name>
+		<url-pattern>/UserLogin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminLogin</servlet-name>
+		<servlet-class>com.kumar.action.admin.AdminLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminLogin</servlet-name>
+		<url-pattern>/AdminLogin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Profile</servlet-name>
+		<servlet-class>com.kumar.action.admin.Profile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Profile</servlet-name>
+		<url-pattern>/Profile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditProfile</servlet-name>
+		<servlet-class>com.kumar.action.admin.EditProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditProfile</servlet-name>
+		<url-pattern>/EditProfile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ChangePass</servlet-name>
+		<servlet-class>com.kumar.action.admin.ChangePass</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangePass</servlet-name>
+		<url-pattern>/ChangePass</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ServerList</servlet-name>
+		<servlet-class>com.kumar.action.admin.ServerList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServerList</servlet-name>
+		<url-pattern>/ServerList</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>UserList</servlet-name>
+		<servlet-class>com.kumar.action.admin.UserList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserList</servlet-name>
+		<url-pattern>/UserList</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CalculateFaultTollerance</servlet-name>
+		<servlet-class>com.kumar.action.admin.CalculateFaultTollerance</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CalculateFaultTollerance</servlet-name>
+		<url-pattern>/CalculateFaultTollerance</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- All About Users -->
+	
+	<servlet>
+		<servlet-name>UserProfile</servlet-name>
+		<servlet-class>com.kumar.action.user.UserProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserProfile</servlet-name>
+		<url-pattern>/UserProfile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>EditUserProfile</servlet-name>
+		<servlet-class>com.kumar.action.user.EditUserProfile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditUserProfile</servlet-name>
+		<url-pattern>/EditUserProfile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ChangeUserPassword</servlet-name>
+		<servlet-class>com.kumar.action.user.ChangeUserPassword</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ChangeUserPassword</servlet-name>
+		<url-pattern>/ChangeUserPassword</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UploadFile</servlet-name>
+		<servlet-class>com.kumar.action.user.UploadFile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadFile</servlet-name>
+		<url-pattern>/UploadFile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FTPUpload</servlet-name>
+		<servlet-class>com.kumar.action.user.FTPUpload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FTPUpload</servlet-name>
+		<url-pattern>/FTPUpload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DownloadFiles</servlet-name>
+		<servlet-class>com.kumar.action.user.DownloadFiles</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DownloadFiles</servlet-name>
+		<url-pattern>/DownloadFiles</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Download</servlet-name>
+		<servlet-class>com.kumar.action.user.Download</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Download</servlet-name>
+		<url-pattern>/Download</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>VerifyFile</servlet-name>
+		<servlet-class>com.kumar.action.user.VerifyFile</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VerifyFile</servlet-name>
+		<url-pattern>/VerifyFile</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ViewAdminTransaction</servlet-name>
+		<servlet-class>com.kumar.action.admin.ViewAdminTransaction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewAdminTransaction</servlet-name>
+		<url-pattern>/ViewAdminTransaction</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>ViewUserTransaction</servlet-name>
+		<servlet-class>com.kumar.action.user.ViewUserTransaction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewUserTransaction</servlet-name>
+		<url-pattern>/ViewUserTransaction</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+</web-app>
